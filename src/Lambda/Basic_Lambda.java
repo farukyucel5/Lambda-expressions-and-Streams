@@ -38,7 +38,7 @@ public class Basic_Lambda {
         list_lambda.add(4);
         list_lambda.add(5);
 
-        list_lambda.forEach(each-> System.out.println(each));
+        list_lambda.forEach(System.out::println);
 
         System.out.println("===========================");
 
