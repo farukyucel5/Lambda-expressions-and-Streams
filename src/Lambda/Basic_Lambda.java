@@ -27,7 +27,7 @@ public class Basic_Lambda {
         Lmd2 l2=(s)-> System.out.println("Welcome  "+s);
         l2.yaz("Faruk");
 
-        Lmd3 l3=(a,b)->a+b;
+        Lmd3 l3= Integer::sum;
         System.out.println("The result: "+l3.sum(8,34));
 
 
