@@ -1,22 +1,29 @@
 package Green_grocer;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.Scanner;
+import java.util.*;
+import java.util.stream.Collectors;
 
 public class Customer {
     public static List<Product> product_mapping() {
         List<Product> products_list=new ArrayList<>();
+
         products_list.add(new Product("potatoes",10));
         products_list.add(new Product("tomato",12));
         products_list.add(new Product("onion",13));
         products_list.add(new Product("dragon fruit",30));
-        return products_list;
 
+        Map<String,Double> productMap=products_list.stream().
+                collect(Collectors.toMap(product -> product.name_of_product,product ->product.price ));
+
+
+        System.out.println("========================================================================");
+        System.out.println("Products:   "+productMap);
+        System.out.println("========================================================================");
+
+        return products_list;
     }
     public static void main(String[] args) {
-        product_mapping();
+       product_mapping();
         boolean value=true;
         double total=0;
 

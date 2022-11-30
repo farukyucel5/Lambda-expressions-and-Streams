@@ -17,20 +17,11 @@ public class Product {
      */
 
     String name_of_product;
-
-
     double price;
-
-
-    Product( String name_of_product,double price) {
+    Product(String name_of_product, double price) {
 
         this.name_of_product=name_of_product;
         this.price=price;
-
-        Map<String,Double> product_map=new HashMap<>();
-        product_map.put(name_of_product,price);
-
-        System.out.println(product_map);
 
     }
     public double getPrice() {
