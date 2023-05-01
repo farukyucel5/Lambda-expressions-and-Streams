@@ -45,7 +45,11 @@ public class Streaming_Lambda {
 
         //reduce
 
-        Optional<Integer> sumation=list_lambda.stream().reduce(Integer::sum);
+        Optional<Integer> summation=list_lambda.stream().reduce(Integer::sum);
+        System.out.println(summation.stream().toList());
+
+        List<Integer> summation1=list_lambda.stream().reduce(Integer::sum).stream().toList();
+        System.out.println(summation1);
 
 
     }
