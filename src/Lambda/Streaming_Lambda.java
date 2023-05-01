@@ -29,25 +29,23 @@ public class Streaming_Lambda {
 
         //map
 
-        List<Integer> lm=list_lambda.stream().map(p->p+2).collect(Collectors.toList());
+        List<Integer> lm=list_lambda.stream().map(p->p+2).toList();
 
         System.out.println("The map list: "+lm);
 
         //filter
 
-        List<Integer> lf1=list_lambda.stream().filter(p->p%2==0).collect(Collectors.toList());
+        List<Integer> lf1=list_lambda.stream().filter(p->p%2==0).toList();
 
         System.out.println("The filter list: "+lf1);
 
-        List<Integer> lf2=list_lambda.stream().filter(p->p>5).collect(Collectors.toList());
+        List<Integer> lf2=list_lambda.stream().filter(p->p>5).toList();
 
         System.out.println("The filter list2: "+lf2);
 
         //reduce
 
-        Optional<Integer> sumation=list_lambda.stream().reduce((p1, p2)->p1+p2);
-
-        System.out.println(sumation);
+        Optional<Integer> sumation=list_lambda.stream().reduce(Integer::sum);
 
 
     }
