@@ -26,13 +26,13 @@ public class New_features {
         users.forEach(User::talk);//method reference
 
         List<User> filteredList = users.stream().filter(user -> user.id>5)
-                .collect(Collectors.toList());
+                .toList();
         System.out.println("========Filtered list========");
         filteredList.forEach(User::talk);
 
         List<User> mappedList = users.stream()
                 .map(user -> new User(user.id+100,user.name))
-                .collect(Collectors.toList());
+                .toList();
         mappedList.forEach(user -> System.out.println(user.toString()));
 
         System.out.println("==============================================");
